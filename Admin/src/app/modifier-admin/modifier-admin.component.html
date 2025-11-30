@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-topbar-color="dark">
+
+    
+<!-- Mirrored from coderthemes.com/ubold/layouts/default/forms-elements.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Jan 2025 07:52:01 GMT -->
+<head>
+        <meta charset="utf-8" />
+        <title>Form Components | Ubold - Responsive Bootstrap 5 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+
+
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            
+            <!-- ========== Menu ========== -->
+            <app-menu></app-menu>
+            <!-- ========== Left menu End ========== -->
+
+            
+
+            
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                
+                <!-- ========== Topbar Start ========== -->
+             <app-header></app-header>
+                <!-- ========== Topbar End ========== -->
+                
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                  
+                                    <h4 class="page-title">Modifier administrateur</h4>
+                                </div>
+                            </div>
+                        </div>
+             
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Ajouter Administrateur</h4>
+                                       
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <form (ngSubmit)="updateAdmin()" [formGroup]="adminForm">
+
+                                                    <div class="mb-3">
+                                                        <label for="simpleinput" class="form-label">Nom</label>
+                                                        <input  formControlName="nom"  type="text" id="simpleinput" class="form-control">
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="example-email" class="form-label">Prrénom</label>
+                                                        <input  formControlName="prenom" type="text" id="example-email" name="example-email" class="form-control" placeholder="Email">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="example-email" class="form-label">Email</label>
+                                                        <input formControlName="email"  type="email" id="example-email" name="example-email" class="form-control" placeholder="Email">
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="example-password" class="form-label">Mot de passe</label>
+                                                        <input  formControlName="mp" type="password" id="example-password" class="form-control" value="password">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="example-select" class="form-label">Role</label>
+                                                        <select formControlName="role"  class="form-select" id="example-select">
+                                                            <option>Choisir votre Role</option>
+                                                            <option>Super Administrateur</option>
+                                                            <option>Sous Administrateur</option>
+                                                         
+                                                        </select>
+                                                    </div>
+
+                                                    <button type="submit" class="btn btn-primary">Ajouter</button>
+
+
+
+                                                  
+                                                  
+                                                </form>
+                                            </div> <!-- end col -->
+
+                                            <!-- end col -->
+                                        </div>
+                                        <!-- end row-->
+
+                                    </div> <!-- end card-body -->
+                                </div> <!-- end card -->
+                            </div><!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                       
+                        <!-- end row -->
+
+                     
+
+             
+                        <!-- end row -->
+
+
+                 
+                        <!-- end row -->
+
+
+                       
+
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+         
+
+            </div>
+
+         
+
+
+        </div>
+        
+
+      
+
+    
+
+    </body>
+
+
+</html>

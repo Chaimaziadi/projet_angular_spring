@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en" data-topbar-color="dark">
+
+    
+
+<head>
+        <meta charset="utf-8" />
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+
+      
+	
+
+	
+
+	
+
+		
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+
+          
+           <app-menu></app-menu>
+      
+
+            
+
+            
+
+          
+           
+
+            <div class="content-page">
+
+                
+               <app-header></app-header>
+               
+
+                <div class="content">
+
+                  
+                    <div class="container-fluid">
+                        
+                      
+                       
+                     
+                         <a href="/ajouter-cour" class="btn btn-primary"> ajouter</a>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                      
+                                    
+
+                                        <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+                                            <thead>
+                                                <tr>
+                                                    <th>Id</th>
+                                                    <th>Nom</th>
+                                                    <th>image</th>
+                                                    <th>Description</th>
+                                                    <th>Cour</th>
+                                                    <th>Nom Formateur</th>
+                                                </tr>
+                                            </thead>
+                        
+                                            <tbody>
+                                                <tr *ngFor="let cour of listeCour"> 
+                                                    <td>{{cour.id}}</td>
+                                                      
+                                                    <td>{{cour.nom}}</td>
+                                                    <td><img [src]="cour.img" style="width: 80px;"></td>
+                                                    <td>{{cour.description}}</td>                                        
+                                                    <td>{{cour.cour}}</td>
+                                                    <td>{{cour.nomformation}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div> 
+                                </div> 
+                            </div>
+                        </div>
+                       
+
+
+                       
+                        
+                    </div>
+
+                </div>
+
+              
+
+            </div>
+
+           
+          
+           
+
+
+        </div>
+  
+
+
+        
+        
+       
+
+  
+
+       
+        
+    </body>
+
+<!-- Mirrored from coderthemes.com/ubold/layouts/default/tables-datatables.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Jan 2025 07:52:14 GMT -->
+</html>

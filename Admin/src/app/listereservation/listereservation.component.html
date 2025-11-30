@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-topbar-color="dark">
+
+    
+<!-- Mirrored from coderthemes.com/ubold/layouts/default/tables-datatables.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Jan 2025 07:52:10 GMT -->
+<head>
+        <meta charset="utf-8" />
+        <title>Datatables | Ubold - Responsive Bootstrap 5 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+
+      
+	
+
+	
+
+	
+
+		
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            
+            <!-- ========== Menu ========== -->
+         <app-menu></app-menu>
+            <!-- ========== Left menu End ========== -->
+
+            
+
+            
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+
+                <!-- ========== Topbar Start ========== -->
+                <app-header></app-header>
+                <!-- ========== Topbar End ========== -->
+
+                <div class="content">
+
+              
+                    <div class="container-fluid">
+                        
+                       
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                   
+                                    <h4 class="page-title">Liste reservation</h4>
+                                </div>
+                            </div>
+                        </div>
+                     
+                    
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        
+                                        
+
+                                        <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">id</th>
+                                                    <th scope="col">nom</th>
+                                                    <th scope="col">prenom</th>
+                                                    <th scope="col">nom de cour</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr *ngFor="let reservation of  listReservation">
+                                                    <th scope="row">{{reservation.id}}</th>
+                                                    <td>{{reservation.etudiant.nom}}</td>
+                                                    <td>{{reservation.etudiant.prenom}}</td>
+                                                    <td>{{reservation.cour.nomformation}}</td>
+                                                  </tr>
+                                                  
+                                              
+                                            
+                                            </tbody>
+                                        </table>
+
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                     
+
+
+                       
+                        
+                    </div>
+
+                </div> 
+
+              
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div><script>document.write(new Date().getFullYear())</script> © Ubold - <a href="https://coderthemes.com/" target="_blank">Coderthemes.com</a></div>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </footer>
+             
+
+            </div>
+
+
+
+
+        </div>
+   
+
+      
+        
+       
+
+  
+
+       
+        
+    </body>
+
+</html>

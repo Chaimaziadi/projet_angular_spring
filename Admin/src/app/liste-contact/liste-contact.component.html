@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en" data-topbar-color="dark">
+
+    
+<!-- Mirrored from coderthemes.com/ubold/layouts/default/tables-datatables.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Jan 2025 07:52:10 GMT -->
+<head>
+        <meta charset="utf-8" />
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+
+      
+	
+
+	
+
+	
+
+		
+    </head>
+
+    <body>
+
+  
+        <div id="wrapper">
+
+            
+
+           <app-menu></app-menu>
+      
+
+            <div class="content-page">
+
+             
+               <app-header></app-header>
+              
+
+                <div class="content">
+
+                    <div class="container-fluid">
+                        
+                     
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title"> Liste contact</h4>
+                                       
+
+                                        <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+                                            <thead>
+                                                <tr>
+                                                    <th>id</th>
+                                                    <th>Nom</th>
+                                                    <th>Email</th>
+                                                    <th>tlf</th>
+                                                    <th>sujet</th>
+                                                    <th>message</th>
+                                                    <th> Action</th>
+                                                </tr>
+                                            </thead>
+                                        
+                                        
+                                            <tbody>
+                                                <tr *ngFor ="let contact of  listeContact">
+                                                    <td>{{contact.id}}</td>
+                                                    <td>{{contact.nom}}</td>
+                                                    <td>{{contact.email}}</td>
+                                                    <td>{{contact.tlf}}</td>
+                                                    <td>{{contact.sujet}}</td>
+                                                    <td>{{contact.msg}}</td>
+                                                    
+                                                    <td>
+                                                        <button (click)="DeleteContact(contact)" class="btn btn-success">Supprimer</button>
+
+                                                      </td>
+                                                </tr>
+                                            
+                                            </tbody>
+                                        </table>
+
+                                    </div> 
+                                </div> 
+                            </div>
+                        </div>
+                    
+
+
+                       
+                        
+                    </div> 
+
+                </div> 
+
+              <app-footer></app-footer>
+
+            </div>
+
+           
+
+
+        </div>
+     
+
+      
+        
+       
+
+  
+
+       
+        
+    </body>
+
+
+</html>

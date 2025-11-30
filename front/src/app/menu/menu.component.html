@@ -1,0 +1,42 @@
+<header class="stick-top forsticky">
+    <div class="menu-sec">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" title=""><img class="hidesticky" src="assets/images/tesr.png" alt=""  style="width: 200px;"/><img class="showsticky" style="width: 200px;" src="assets/images/tesr.png" alt="" /></a>
+            </div><!-- Logo -->
+            <div class="btn-extars">
+                
+                <ul class="account-btns">
+                    <li><a  *ngIf="!IsloggedIn" href="/login" title="">Connexion</a ></li>
+                    <li><a  *ngIf="IsloggedIn"(click)="logout()" title="">Deconnexion</a ></li>
+                </ul>
+            </div><!-- Btn Extras -->
+            <nav>
+                <ul>
+                    <li class="">
+                        <a href="" title="">acceuil</a>
+                       
+                    </li>
+                    <li class="">
+                        <a href="/about" title="">Qui Somme Nous</a>
+                        
+                    </li>
+                    <li class="">
+                        <a href="/cour" title="">Cour</a>
+                      
+                    </li>
+                    <li class="" *ngIf="IsloggedIn">
+                        <a href="/mesreservation" title="">mes reservation</a>
+                      
+                    </li>
+                    
+                 
+                    <li class="">
+                        <a href="/contact" title="">Contact</a>
+                     
+                    </li>
+                </ul>
+            </nav><!-- Menus -->
+        </div>
+    </div>
+</header>

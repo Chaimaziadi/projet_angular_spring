@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-topbar-color="dark">
+
+    
+<!-- Mirrored from coderthemes.com/ubold/layouts/default/tables-datatables.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Jan 2025 07:52:10 GMT -->
+<head>
+        <meta charset="utf-8" />
+        <title>Datatables | Ubold - Responsive Bootstrap 5 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+
+      
+	
+
+	
+
+	
+
+		
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            
+            <!-- ========== Menu ========== -->
+         <app-menu></app-menu>
+            <!-- ========== Left menu End ========== -->
+
+            
+
+            
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+
+                <!-- ========== Topbar Start ========== -->
+                <app-header></app-header>
+                <!-- ========== Topbar End ========== -->
+
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        
+                        <!-- start page title -->
+                        
+                        <!-- end page title -->
+                        <a href="/" class="btn btn-primary"> ajouter</a>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Liste des administrateur</h4>
+                                      
+
+                                        <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+                                            <thead>
+                                                <tr>
+                                                    <th>id</th>
+                                                    <th>Nom</th>
+                                                    <th>Prenom</th>
+                                                    <th>Email</th>
+                                                    <th>Role</th>
+                                                    <th *ngIf="role=='superAdmin'"> Action</th>
+                                                </tr>
+                                            </thead>
+                                        
+                                        
+                                            <tbody>
+                                                <tr *ngFor ="let admin of  listeAdmin">
+                                                    <td>{{admin.id}}</td>
+                                                    <td>{{admin.nom}}</td>
+                                                    <td>{{admin.prenom}}</td>
+                                                    <td>{{admin.email}}</td>
+                                                    <td>{{admin.role}}</td>
+                                                    <td *ngIf="role=='superAdmin'"><a href="/mofidier-admin/{{admin.id}}" type="submit" class="btn btn-secondary">Modifer</a>
+                                                        <button (click)="DeleteAdmin(admin)" class="btn btn-success">Supprimer</button>
+
+                                                      </td>
+                                                </tr>
+                                            
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+
+                       
+                        
+                    </div> 
+
+                </div>
+              
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div><script>document.write(new Date().getFullYear())</script> © Ubold - <a href="https://coderthemes.com/" target="_blank">Coderthemes.com</a></div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </footer>
+           
+
+            </div>
+
+
+
+
+        </div>
+      
+
+
+      
+        
+       
+
+  
+
+       
+        
+    </body>
+
+
+</html>
